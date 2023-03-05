@@ -1,13 +1,13 @@
 {
   "package-name": "@shdevelopers/react-native-boilerplate",
   "name": "@shdevelopers/react-native-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native Boilerplate",
   "repository": {
     "type": "git",
     "url": "https://github.com/shdevelopersofficial/react-native-boilerplate.git"
   },
-  "author": "shdevelopersofficial <shdevelopersofficial@gmail.com>",
+  "author": "shdevelopers <shdevelopersofficial@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shdevelopersofficial/react-native-boilerplate/issues"

@@ -13,7 +13,7 @@ This project is a [React Native](https://facebook.github.io/react-native/) boile
 To create a new project using the boilerplate simply run :
 
 ```
-npx react-native init MyApp --template shdevelopersofficial/react-native-boilerplate
+npx react-native init MyApp --template @shdevelopers/react-native-boilerplate
 ```
 
 ## Documentation
