@@ -1,5 +1,4 @@
 ![React Native Boilerplate License](https://img.shields.io/github/license/shdevelopersofficial/react-native-boilerplate)
-![React Native Boilerplate Release Date](https://img.shields.io/github/release-date/shdevelopersofficial/react-native-boilerplate)
 ![React Native Boilerplate Stars](https://img.shields.io/github/stars/shdevelopersofficial/react-native-boilerplate)
 ![React Native Boilerplate Top Language](https://img.shields.io/github/languages/top/shdevelopersofficial/react-native-boilerplate)
 ![React Native Boilerplate TypeScript](https://badgen.net/npm/types/tslib)
