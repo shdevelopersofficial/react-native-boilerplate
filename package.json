@@ -1,0 +1,44 @@
+{
+  "package-name": "@shdevelopers/react-native-boilerplate",
+  "name": "@shdevelopers/react-native-boilerplate",
+  "version": "1.0.0",
+  "description": "React Native Boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shdevelopersofficial/react-native-boilerplate.git"
+  },
+  "author": "shdevelopersofficial <shdevelopersofficial@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shdevelopersofficial/react-native-boilerplate/issues"
+  },
+  "homepage": "https://shdevelopersofficial.github.io/react-native-boilerplate/",
+  "main": "post-init-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "react-native"
+  ],
+  "dependencies": {
+    "kleur": "^4.1.4",
+    "ora": "^6.1.2",
+    "prompts": "^2.4.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/cz-commitlint": "^16.0.0",
+    "@commitlint/prompt-cli": "^16.0.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
