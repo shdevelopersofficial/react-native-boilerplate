@@ -1,3 +1,5 @@
+# It is not released. Currently development is progress. Thank you for your patience.
+
 ![React Native Boilerplate License](https://img.shields.io/github/license/shdevelopersofficial/react-native-boilerplate)
 ![React Native Boilerplate Stars](https://img.shields.io/github/stars/shdevelopersofficial/react-native-boilerplate)
 ![React Native Boilerplate Top Language](https://img.shields.io/github/languages/top/shdevelopersofficial/react-native-boilerplate)
