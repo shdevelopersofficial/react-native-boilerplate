@@ -18,7 +18,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "shdevelopers", // Usually your GitHub org/user name.
+  organizationName: "shdevelopersofficial", // Usually your GitHub org/user name.
   projectName: "react-native-boilerplate", // Usually your repo name.
 
   onBrokenLinks: "throw",
