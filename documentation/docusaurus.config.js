@@ -42,14 +42,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/shdevelopersofficial/react-native-boilerplate/edit/main/documentation/docs",
+            "https://github.com/shdevelopersofficial/react-native-boilerplate/edit/main/documentation",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/shdevelopersofficial/react-native-boilerplate/edit/main/documentation/blog",
+            "https://github.com/shdevelopersofficial/react-native-boilerplate/edit/main/documentation",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -92,7 +92,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/intro",
+                to: "/docs",
               },
             ],
           },
@@ -127,7 +127,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} SH Developers, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
