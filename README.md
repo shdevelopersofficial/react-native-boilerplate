@@ -1,4 +1,4 @@
-# It is not released. Currently development is progress. Thank you for your patience.
+# It is not completed officially. Currently development is progress. Thank you for your patience.
 
 ![React Native Boilerplate License](https://img.shields.io/github/license/shdevelopersofficial/react-native-boilerplate)
 ![React Native Boilerplate Stars](https://img.shields.io/github/stars/shdevelopersofficial/react-native-boilerplate)
