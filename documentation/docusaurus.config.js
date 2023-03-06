@@ -3,13 +3,17 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const users = require("./showcase.json");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "React native boilerplate",
   tagline: "Easy , Fast and Secure React Native Boilerplate",
   favicon: "img/favicon.ico",
-  // themes: ["@docusaurus/theme-search-algolia"],
+  customFields: {
+    users,
+  },
+
   // themeConfig: {
 
   // algolia: {
@@ -76,7 +80,7 @@ const config = {
             "https://github.com/shdevelopersofficial/react-native-boilerplate/edit/main/documentation",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [require.resolve("./src/css/custom.css")],
         },
       }),
     ],

@@ -1,0 +1,20 @@
+{
+  "others": [
+    {
+      "name": "AdOn ",
+      "description": "",
+      "icon": "adon.png",
+      "appStore": "",
+      "playStore": "https://play.google.com/store/apps/details?id=com.adon.app",
+      "website": ""
+    },
+    {
+      "name": "Fit with Fazna",
+      "description": "",
+      "icon": "fwf.png",
+      "appStore": "https://apps.apple.com/in/app/fit-with-fazna-fwf/id6443885772",
+      "playStore": "https://play.google.com/store/apps/details?id=com.fitwithfazna",
+      "website": ""
+    }
+  ]
+}
