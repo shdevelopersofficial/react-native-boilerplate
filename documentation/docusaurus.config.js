@@ -10,32 +10,30 @@ const config = {
   tagline: "Easy , Fast and Secure React Native Boilerplate",
   favicon: "img/favicon.ico",
   // themes: ["@docusaurus/theme-search-algolia"],
-  themeConfig: {
-    metadata: [
-      { name: "keywords", content: "react-native boilerplate , react-native" },
-    ],
-    // algolia: {
-    //   // The application ID provided by Algolia
-    //   appId: 'YOUR_APP_ID',
-    //   // Public API key: it is safe to commit it
-    //   apiKey: 'YOUR_SEARCH_API_KEY',
-    //   indexName: 'YOUR_INDEX_NAME',
-    //   // Optional: see doc section below
-    //   contextualSearch: true,
-    //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-    //   externalUrlRegex: 'external\\.com|domain\\.com',
-    //   // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-    //   replaceSearchResultPathname: {
-    //     from: '/docs/', // or as RegExp: /\/docs\//
-    //     to: '/',
-    //   },
-    //   // Optional: Algolia search parameters
-    //   searchParameters: {},
-    //   // Optional: path for search page that enabled by default (`false` to disable it)
-    //   searchPagePath: 'search',
-    //   //... other Algolia params
-    // },
-  },
+  // themeConfig: {
+
+  // algolia: {
+  //   // The application ID provided by Algolia
+  //   appId: 'YOUR_APP_ID',
+  //   // Public API key: it is safe to commit it
+  //   apiKey: 'YOUR_SEARCH_API_KEY',
+  //   indexName: 'YOUR_INDEX_NAME',
+  //   // Optional: see doc section below
+  //   contextualSearch: true,
+  //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+  //   externalUrlRegex: 'external\\.com|domain\\.com',
+  //   // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+  //   replaceSearchResultPathname: {
+  //     from: '/docs/', // or as RegExp: /\/docs\//
+  //     to: '/',
+  //   },
+  //   // Optional: Algolia search parameters
+  //   searchParameters: {},
+  //   // Optional: path for search page that enabled by default (`false` to disable it)
+  //   searchPagePath: 'search',
+  //   //... other Algolia params
+  // },
+  // },
   // Set the production url of your site here
   url: "https://shdevelopersofficial.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -87,72 +85,99 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "light",
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+
+      metadata: [
+        {
+          name: "keywords",
+          content: "react-native boilerplate , react-native",
+        },
+      ],
+      announcementBar: {
+        id: "support_us",
+        content:
+          '⭐️ If you like our react native boilerplate, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/shdevelopersofficial/react-native-boilerplate">GitHub</a>',
+        backgroundColor: "#fafbfc",
+        textColor: "#091E42",
+        isCloseable: false,
+      },
+
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
+        hideOnScroll: true,
         title: "React native boilerplate",
         logo: {
           alt: "React native boilerplate",
           src: "img/logo.svg",
+          srcDark: "img/logo.svg",
+          width: 32,
+          height: 32,
         },
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "introduction",
             position: "left",
-            label: "Tutorial",
+            label: "Docs",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "showcase", label: "Showcase", position: "left" },
+          // { to: "/blog", label: "Blog", position: "left" },
           {
             href: "https://github.com/shdevelopersofficial/react-native-boilerplate",
-            label: "GitHub",
             position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
           },
         ],
       },
       footer: {
         style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs",
-              },
-            ],
-          },
-          // {
-          //   title: "Community",
-          //   items: [
-          //     {
-          //       label: "Stack Overflow",
-          //       href: "https://stackoverflow.com/questions/tagged/docusaurus",
-          //     },
-          //     {
-          //       label: "Discord",
-          //       href: "https://discordapp.com/invite/docusaurus",
-          //     },
-          //     {
-          //       label: "Twitter",
-          //       href: "https://twitter.com/docusaurus",
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: "More",
-          //   items: [
-          //     {
-          //       label: "Blog",
-          //       to: "/blog",
-          //     },
-          //     {
-          //       label: "GitHub",
-          //       href: "https://github.com/facebook/docusaurus",
-          //     },
-          //   ],
-          // },
-        ],
+        // links: [
+        //   {
+        //     title: "Docs",
+        //     items: [
+        //       {
+        //         label: "Tutorial",
+        //         to: "/docs",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "Community",
+        //     items: [
+        //       {
+        //         label: "Stack Overflow",
+        //         href: "https://stackoverflow.com/questions/tagged/docusaurus",
+        //       },
+        //       {
+        //         label: "Discord",
+        //         href: "https://discordapp.com/invite/docusaurus",
+        //       },
+        //       {
+        //         label: "Twitter",
+        //         href: "https://twitter.com/docusaurus",
+        //       },
+        //     ],
+        //   },
+        //   {
+        //     title: "More",
+        //     items: [
+        //       {
+        //         label: "Blog",
+        //         to: "/blog",
+        //       },
+        //       {
+        //         label: "GitHub",
+        //         href: "https://github.com/facebook/docusaurus",
+        //       },
+        //     ],
+        //   },
+        // ],
         copyright: `Copyright © ${new Date().getFullYear()} SH Developers, Inc.`,
       },
       prism: {
