@@ -28,10 +28,10 @@
     "prompts": "^2.4.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.0.2",
-    "@commitlint/config-conventional": "^16.0.0",
-    "@commitlint/cz-commitlint": "^16.0.0",
-    "@commitlint/prompt-cli": "^16.0.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/cz-commitlint": "^17.0.0",
+    "@commitlint/prompt-cli": "^17.0.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0"
   },
