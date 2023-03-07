@@ -1536,7 +1536,7 @@
     use-sync-external-store "^1.2.0"
     utility-types "^3.10.0"
 
-"@docusaurus/theme-search-algolia@2.3.1", "@docusaurus/theme-search-algolia@^2.3.1":
+"@docusaurus/theme-search-algolia@2.3.1":
   version "2.3.1"
   resolved "https://registry.npmjs.org/@docusaurus/theme-search-algolia/-/theme-search-algolia-2.3.1.tgz"
   integrity sha512-JdHaRqRuH1X++g5fEMLnq7OtULSGQdrs9AbhcWRQ428ZB8/HOiaN6mj3hzHvcD3DFgu7koIVtWPQnvnN7iwzHA==
