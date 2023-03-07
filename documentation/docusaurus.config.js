@@ -150,6 +150,22 @@ const config = {
         ],
       },
     ],
+    [
+      "@docusaurus/plugin-sitemap",
+      {
+        changefreq: "weekly",
+        priority: 0.5,
+        ignorePatterns: ["/tags/**"],
+        filename: "sitemap.xml",
+      },
+    ],
+    [
+      "@docusaurus/plugin-google-gtag",
+      {
+        trackingID: "G-7BDFSMZKWD",
+        anonymizeIP: true,
+      },
+    ],
   ],
 
   presets: [
