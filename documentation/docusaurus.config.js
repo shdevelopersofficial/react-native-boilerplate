@@ -194,7 +194,8 @@ const config = {
         },
         gtag: !(isDeployPreview || isBranchDeploy)
           ? {
-              trackingID: ["G-7BDFSMZKWD"],
+              trackingID: "G-7BDFSMZKWD",
+              anonymizeIP: true,
             }
           : undefined,
       }),
