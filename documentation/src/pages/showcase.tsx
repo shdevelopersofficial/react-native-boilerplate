@@ -30,7 +30,7 @@ const ShowCaseCard = (props) => {
     : icon;
   return (
     <div
-      className="col col--4"
+      className="col col--3"
       style={{
         display: "flex",
         justifyContent: "center",
@@ -121,14 +121,20 @@ export default function Home(): JSX.Element {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
       <main>
         <div className="container">
+          <h1
+            style={{
+              marginTop: "50px",
+              marginLeft: "60px",
+            }}
+          >
+            Users Showcase
+          </h1>
+
           <div
             className="row"
             style={{
-              marginTop: "50px",
-              border: "1px solid #808080",
               borderRadius: "10px",
               paddingTop: "40px",
               paddingLeft: "40px",
