@@ -1475,22 +1475,7 @@
     workbox-precaching "^6.5.3"
     workbox-window "^6.5.3"
 
-"@docusaurus/plugin-sitemap@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.npmjs.org/@docusaurus/plugin-sitemap/-/plugin-sitemap-2.3.1.tgz"
-  integrity sha512-8Yxile/v6QGYV9vgFiYL+8d2N4z4Er3pSHsrD08c5XI8bUXxTppMwjarDUTH/TRTfgAWotRbhJ6WZLyajLpozA==
-  dependencies:
-    "@docusaurus/core" "2.3.1"
-    "@docusaurus/logger" "2.3.1"
-    "@docusaurus/types" "2.3.1"
-    "@docusaurus/utils" "2.3.1"
-    "@docusaurus/utils-common" "2.3.1"
-    "@docusaurus/utils-validation" "2.3.1"
-    fs-extra "^10.1.0"
-    sitemap "^7.1.1"
-    tslib "^2.4.0"
-
-"@docusaurus/plugin-sitemap@^2.3.1":
+"@docusaurus/plugin-sitemap@2.3.1", "@docusaurus/plugin-sitemap@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-sitemap/-/plugin-sitemap-2.3.1.tgz#f526ab517ca63b7a3460d585876f5952cb908aa0"
   integrity sha512-8Yxile/v6QGYV9vgFiYL+8d2N4z4Er3pSHsrD08c5XI8bUXxTppMwjarDUTH/TRTfgAWotRbhJ6WZLyajLpozA==
@@ -1790,6 +1775,14 @@
   version "1.6.22"
   resolved "https://registry.npmjs.org/@mdx-js/react/-/react-1.6.22.tgz"
   integrity sha512-TDoPum4SHdfPiGSAaRBw7ECyI8VaHpK8GJugbJIJuqyh6kzw9ZLJZW3HGL3NNrJGxcAixUvqROm+YuQOo5eXtg==
+
+"@mdx-js/react@^2.0.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.3.0.tgz#4208bd6d70f0d0831def28ef28c26149b03180b3"
+  integrity sha512-zQH//gdOmuu7nt2oJR29vFhDv88oGPmVw6BggmrHeMI+xgEkp1B2dX9/bMBSYtK0dyLX/aOmesKS09g222K1/g==
+  dependencies:
+    "@types/mdx" "^2.0.0"
+    "@types/react" ">=16"
 
 "@mdx-js/util@1.6.22":
   version "1.6.22"
@@ -2247,6 +2240,11 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/mdx@^2.0.0":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@types/mdx/-/mdx-2.0.3.tgz#43fd32414f17fcbeced3578109a6edd877a2d96e"
+  integrity sha512-IgHxcT3RC8LzFLhKwP3gbMPeaK7BM9eBH46OdapPA7yvuIUJ8H6zHZV53J8hGZcTSnt95jANt+rTBNUUc22ACQ==
+
 "@types/mime@*":
   version "3.0.1"
   resolved "https://registry.npmjs.org/@types/mime/-/mime-3.0.1.tgz"
@@ -2313,7 +2311,7 @@
     "@types/history" "^4.7.11"
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@>=16":
   version "18.0.28"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.0.28.tgz"
   integrity sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==
