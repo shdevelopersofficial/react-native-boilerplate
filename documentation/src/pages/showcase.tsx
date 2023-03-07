@@ -42,8 +42,8 @@ const ShowCaseCard = (props) => {
         style={{
           borderRadius: "10px",
           minWidth: 250,
-          height: 250,
-          border: "1px solid #808080",
+          height: 230,
+          border: ".5px solid #808080",
           overflow: "hidden",
           justifyContent: "center",
           alignItems: "center",
