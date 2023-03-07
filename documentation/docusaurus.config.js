@@ -159,13 +159,6 @@ const config = {
         filename: "sitemap.xml",
       },
     ],
-    [
-      "@docusaurus/plugin-google-gtag",
-      {
-        trackingID: "G-7BDFSMZKWD",
-        anonymizeIP: true,
-      },
-    ],
   ],
 
   presets: [
@@ -199,6 +192,11 @@ const config = {
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
         },
+        gtag: !(isDeployPreview || isBranchDeploy)
+          ? {
+              trackingID: ["G-7BDFSMZKWD"],
+            }
+          : undefined,
       }),
     ],
   ],
