@@ -7,6 +7,18 @@ const npm2yarn = require("@docusaurus/remark-plugin-npm2yarn");
 
 const users = require("./showcase.json");
 
+const isDev = process.env.NODE_ENV === "development";
+
+const isDeployPreview =
+  !!process.env.NETLIFY && process.env.CONTEXT === "deploy-preview";
+
+// Netlify branch deploy like "docusaurus-v2"
+const isBranchDeploy =
+  !!process.env.NETLIFY && process.env.CONTEXT === "branch-deploy";
+
+// Used to debug production build issues faster
+const isBuildFast = !!process.env.BUILD_FAST;
+
 // This probably only makes sense for the alpha/beta/rc phase, temporary
 function getNextVersionName() {
   return "Canary";
@@ -36,6 +48,7 @@ const config = {
 
   // Set the production url of your site here
   url: "https://shdevelopersofficial.github.io",
+  trailingSlash: isDeployPreview,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/react-native-boilerplate/",
@@ -45,6 +58,27 @@ const config = {
   organizationName: "shdevelopersofficial", // Usually your GitHub org/user name.
   projectName: "react-native-boilerplate", // Usually your repo name.
 
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve("swc-loader"),
+      options: {
+        jsc: {
+          parser: {
+            syntax: "typescript",
+            tsx: true,
+          },
+          target: "es2017",
+        },
+        module: {
+          type: isServer ? "commonjs" : "es6",
+        },
+      },
+    }),
+  },
+
+  markdown: {
+    mermaid: true,
+  },
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
@@ -55,6 +89,68 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
+  plugins: [
+    [
+      "pwa",
+      {
+        debug: isDeployPreview,
+        offlineModeActivationStrategies: [
+          "appInstalled",
+          "standalone",
+          "queryString",
+        ],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "img/docusaurus.png",
+          },
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "manifest.json",
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "rgb(37, 194, 160)",
+          },
+          {
+            tagName: "meta",
+            name: "apple-mobile-web-app-capable",
+            content: "yes",
+          },
+          {
+            tagName: "meta",
+            name: "apple-mobile-web-app-status-bar-style",
+            content: "#000",
+          },
+          {
+            tagName: "link",
+            rel: "apple-touch-icon",
+            href: "img/docusaurus.png",
+          },
+          {
+            tagName: "link",
+            rel: "mask-icon",
+            href: "img/docusaurus.png",
+            color: "rgb(62, 204, 94)",
+          },
+          {
+            tagName: "meta",
+            name: "msapplication-TileImage",
+            content: "img/docusaurus.png",
+          },
+          {
+            tagName: "meta",
+            name: "msapplication-TileColor",
+            content: "#000",
+          },
+        ],
+      },
+    ],
+  ],
 
   presets: [
     [
