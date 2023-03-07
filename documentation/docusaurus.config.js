@@ -95,8 +95,8 @@ const config = {
         indexName: "react-native-boilerplate",
       },
 
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      // Replace with your project's social card ,
+      // image: "img/docusaurus-social-card.jpg",
       navbar: {
         hideOnScroll: true,
         title: "React native boilerplate",
