@@ -1,9 +1,29 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+const path = require("path");
+const math = require("remark-math");
+const npm2yarn = require("@docusaurus/remark-plugin-npm2yarn");
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
 const users = require("./showcase.json");
+
+// This probably only makes sense for the alpha/beta/rc phase, temporary
+function getNextVersionName() {
+  return "Canary";
+  /*
+  const expectedPrefix = '2.0.0-rc.';
+
+  const lastReleasedVersion = versions[0];
+  if (!lastReleasedVersion || !lastReleasedVersion.includes(expectedPrefix)) {
+    throw new Error(
+      'this code is only meant to be used during the 2.0 alpha/beta/rc phase.',
+    );
+  }
+  const version = parseInt(lastReleasedVersion.replace(expectedPrefix, ''), 10);
+  return `${expectedPrefix}${version + 1}`;
+
+   */
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -47,6 +67,15 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/shdevelopersofficial/react-native-boilerplate/edit/main/documentation",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          remarkPlugins: [math, [npm2yarn, { sync: true }]],
+          rehypePlugins: [],
+          versions: {
+            current: {
+              label: `${getNextVersionName()} 🚧`,
+            },
+          },
         },
         blog: {
           showReadingTime: true,

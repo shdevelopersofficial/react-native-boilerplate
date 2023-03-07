@@ -11,12 +11,7 @@ const sidebars = {
         type: "generated-index",
       },
       collapsed: false,
-      items: [
-        "installation",
-        // "configuration",
-        // "playground",
-        // "typescript-support",
-      ],
+      items: ["get-started/installation", "get-started/configuration"],
     },
   ],
 };
