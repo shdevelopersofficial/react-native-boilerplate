@@ -41,8 +41,8 @@ const ShowCaseCard = (props) => {
       <div
         style={{
           borderRadius: "10px",
-          minWidth: 250,
-          height: 230,
+          minWidth: 220,
+          height: 235,
           border: ".5px solid #808080",
           overflow: "hidden",
           justifyContent: "center",
@@ -51,21 +51,47 @@ const ShowCaseCard = (props) => {
           flexDirection: "column",
         }}
       >
-        <ThemedImage
-          width={100}
-          height={100}
-          sources={{
-            light: useBaseUrl(imgSource),
-            dark: useBaseUrl(imgSource),
-          }}
-          style={{
-            borderRadius: 30,
-            boxShadow: "0 0 10px 0 rgba(255,255,255,.5)",
-          }}
-        />
         <div
           style={{
-            marginTop: 10,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflow: "visible",
+            padding: "20px 20px 8px",
+            width: "100%",
+            background: "linear-gradient(rgba(255,255,255,0),transparent)",
+          }}
+        >
+          <div
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <ThemedImage
+              width={100}
+              height={100}
+              sources={{
+                light: useBaseUrl(imgSource),
+                dark: useBaseUrl(imgSource),
+              }}
+              style={{
+                borderRadius: "20px",
+                boxShadow: "0 0 10px 0 rgba(255,255,255,.5)",
+                transition: "transform .2s ease-in-out",
+                justifyContent: "center",
+                alignItems: "center",
+                alignSelf: "center",
+              }}
+            />
+          </div>
+        </div>
+        <div
+          style={{
+            flexDirection: "column",
+            flexGrow: 1,
+            justifyContent: "space-between",
+            padding: "8px 16px 0",
           }}
         >
           <h3
