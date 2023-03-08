@@ -34,6 +34,7 @@ const sidebars = {
         "guides/screens",
         "guides/navigation",
         "guides/redux",
+        "guides/language",
       ],
     },
     {
