@@ -18,6 +18,21 @@ const sidebars = {
         "get-started/codeSigning/codeSigning",
       ],
     },
+    {
+      type: "category",
+      label: "Developer Tools",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "developerTools/introduction",
+        "developerTools/flipper",
+        "developerTools/unitTesting",
+        "developerTools/jenkins",
+        "developerTools/storybook",
+      ],
+    },
     "troubleshooting",
   ],
 };
