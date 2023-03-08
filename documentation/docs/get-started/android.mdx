@@ -1,0 +1,96 @@
+## Current Status
+
+- Current AppName is `rnExample` and application id is `com.rnexample`
+- Also you can see `brand1` and `brand2` in more places.it is a multiple app
+  system.
+
+## Configuration
+
+- Go to terminal and run `npx react-native-rename NewAppName` to change your
+  app.
+
+**Note:** new app name folder is created , but file is existing old appName.
+just copy and and remove existing folder. example `java/com/appName` is need
+manual setup. and confirm application id is changed or not in all android native
+folder.
+
+## Apk Build , App Start and Bundle
+
+Actually we implemented multiple script for start,build apk and bundle release
+in android. it can easy to multiple apk in different [environment](config.md).
+
+- Check package.json file you can see multiple scripts.
+- Also our system can develop multiple app in a single code system.
+- In this code base we added 2 app system. the app name has `brand1` and
+  `brand2`.
+- you can change app name in `brand1` and `brand2` based on your project.
+
+## Steps
+
+1. First goto `android/app/build.gradle`
+
+```bash
+flavorDimensions 'branding'
+    productFlavors {
+        brand1 {
+            dimension 'branding'
+        }
+        brand2 {
+            dimension 'branding'
+        }
+    }
+```
+
+- You can change `brand1` and `brand2`.
+
+- in our system we are using brand1 is default android configuration. so android
+  configuration is existing brand1 `src/main`.
+
+- brand2 android configuration is available another folder `src/brand2`.
+
+2. Goto env file and env folder in root folder.
+
+```bash
+root
+  env
+    ├── brand1
+    │   ├── dev
+    │   ├── live
+    │   └── prod
+    └── brand2
+        ├── dev
+        ├── live
+        └── prod
+.env
+```
+
+- Here you can change all folder brand1 and brand2. and Update this
+  [documentation](config.md) also for better purpose.
+- Update env file details lilke `RN_APP_ID , RN_APP_NAME , RN_APP_BRAND` .etc
+
+3. Goto Package.json , you can see more scripts in this file.
+
+- Example
+
+```bash
+"_start_android_brand1": "npm run android -- --mode=brand1Debug --appId=com.xcule",
+"_build_android_brand1": "npm run _build_android -- assembleBrand1Release",
+"_bundle_android": "npm run _build_android -- bundleBrand1Live",
+```
+
+- The above example , you can see script name and scripts we added `brand1` and
+  `brand2`. you can just replace your `brand1` and `brand2`.
+
+**Note:** Some place you can see `Brand1` and `brand1` uppercase and lowercase.
+keep format like that.
+
+- Also you can update script [documentation](scripts.md) for feature developer
+  purpose.
+
+4. Goto `app/screens` , you can see the brandOne and brandTwo folders
+
+- You can change brandOne and brandTwo name.
+
+5. Goto `app/navigators` , you can see the brandOne and brandTwo folders
+
+- You can change brandOne and brandTwo name.

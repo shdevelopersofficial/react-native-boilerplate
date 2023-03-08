@@ -5,7 +5,12 @@ import React, { useState, useContext } from "react";
 import AppName from "./AppName";
 
 function AppNameInputBox() {
-  const [inputValue, setInputValue] = useState("");
+  const getLocalStorage = () => {
+    const myValue = localStorage.getItem("appName");
+    return myValue ? myValue : "MyApp";
+  };
+
+  const [inputValue, setInputValue] = useState(getLocalStorage());
 
   const handleChange = (event) => {
     setInputValue(event.target.value.trim());
@@ -13,15 +18,14 @@ function AppNameInputBox() {
 
   const handleSubmit = () => {
     // Do something with the input value, such as save it to localStorage
-    console.log("inputValue", inputValue);
     localStorage.setItem("appName", inputValue);
+    window.location.reload();
   };
 
   return (
-    <form>
+    <div>
       <input type="text" value={inputValue || ""} onChange={handleChange} />
       <br />
-
       <button
         type="submit"
         onClick={() => {
@@ -30,7 +34,9 @@ function AppNameInputBox() {
       >
         Save App Name
       </button>
-    </form>
+      <br />
+      <br />
+    </div>
   );
 }
 

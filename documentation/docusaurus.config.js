@@ -299,7 +299,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} SH Developers, Inc.`,
+        // copyright: `Copyright © ${new Date().getFullYear()} SH Developers, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,

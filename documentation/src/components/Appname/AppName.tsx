@@ -4,7 +4,7 @@ function AppName({ type }) {
   const getLocalStorage = () => {
     const myValue = localStorage.getItem("appName");
     if (type === "uppercase") {
-      return myValue ? myValue : "My App";
+      return myValue ? myValue : "MyApp";
     } else {
       return myValue ? myValue.toLowerCase() : "myapp";
     }
