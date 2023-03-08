@@ -249,6 +249,12 @@ const config = {
           { to: "showcase", label: "Showcase", position: "left" },
           // { to: "/blog", label: "Blog", position: "left" },
           {
+            href: "https://www.npmjs.com/package/@shdevelopers/react-native-boilerplate",
+            position: "right",
+            className: "header-npm-link",
+            "aria-label": "Npm package",
+          },
+          {
             href: "https://github.com/shdevelopersofficial/react-native-boilerplate",
             position: "right",
             className: "header-github-link",

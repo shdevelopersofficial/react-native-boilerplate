@@ -20,6 +20,24 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "Guides",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "guides/assets",
+        "guides/constants",
+        "guides/themes",
+        "guides/components",
+        "guides/splashScreen",
+        "guides/screens",
+        "guides/navigation",
+        "guides/redux",
+      ],
+    },
+    {
+      type: "category",
       label: "Developer Tools",
       link: {
         type: "generated-index",
@@ -33,6 +51,7 @@ const sidebars = {
         "developerTools/storybook",
       ],
     },
+    "security/security",
     "troubleshooting",
   ],
 };
