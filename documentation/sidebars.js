@@ -11,7 +11,12 @@ const sidebars = {
         type: "generated-index",
       },
       collapsed: false,
-      items: ["get-started/installation", "get-started/configuration"],
+      items: [
+        "get-started/installation",
+        "get-started/configuration",
+        "get-started/scripts/scripts",
+        "get-started/codeSigning/codeSigning",
+      ],
     },
     "troubleshooting",
   ],
