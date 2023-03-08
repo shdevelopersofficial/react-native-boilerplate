@@ -49,6 +49,7 @@ const config = {
   // Set the production url of your site here
   url: "https://shdevelopersofficial.github.io",
   trailingSlash: isDeployPreview,
+
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/react-native-boilerplate/",
@@ -104,7 +105,7 @@ const config = {
           {
             tagName: "link",
             rel: "icon",
-            href: "img/docusaurus.png",
+            href: "img/logo.png",
           },
           {
             tagName: "link",
@@ -129,18 +130,18 @@ const config = {
           {
             tagName: "link",
             rel: "apple-touch-icon",
-            href: "img/docusaurus.png",
+            href: "img/logo.png",
           },
           {
             tagName: "link",
             rel: "mask-icon",
-            href: "img/docusaurus.png",
+            href: "img/logo.png",
             color: "rgb(62, 204, 94)",
           },
           {
             tagName: "meta",
             name: "msapplication-TileImage",
-            content: "img/docusaurus.png",
+            content: "img/logo.png",
           },
           {
             tagName: "meta",
@@ -148,15 +149,6 @@ const config = {
             content: "#000",
           },
         ],
-      },
-    ],
-    [
-      "@docusaurus/plugin-sitemap",
-      {
-        changefreq: "weekly",
-        priority: 0.5,
-        ignorePatterns: ["/tags/**"],
-        filename: "sitemap.xml",
       },
     ],
   ],
