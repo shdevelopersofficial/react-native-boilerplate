@@ -3,11 +3,12 @@ import React, { useState, useContext } from "react";
 // import store from "../../store/store";
 // import { Provider } from "react-redux";
 import AppName from "./AppName";
+import Link from "@docusaurus/Link";
 
 function AppNameInputBox() {
   const getLocalStorage = () => {
     const myValue = localStorage.getItem("appName");
-    return myValue ? myValue : "MyApp";
+    return myValue ? myValue : "";
   };
 
   const [inputValue, setInputValue] = useState(getLocalStorage());
@@ -24,16 +25,32 @@ function AppNameInputBox() {
 
   return (
     <div>
-      <input type="text" value={inputValue || ""} onChange={handleChange} />
+      <input
+        type="text"
+        id="inputBox"
+        name="inputBox"
+        style={{
+          borderRadius: "10px",
+          padding: "10px",
+          border: "2px solid #ccc",
+          fontSize: "16px",
+          width: "250px",
+        }}
+        value={inputValue || ""}
+        onChange={handleChange}
+        placeholder={"Enter your app name"}
+      />
       <br />
-      <button
-        type="submit"
+      <br />
+
+      <Link
+        className="button button--secondary button--md"
         onClick={() => {
           handleSubmit();
         }}
       >
         Save App Name
-      </button>
+      </Link>
       <br />
       <br />
     </div>

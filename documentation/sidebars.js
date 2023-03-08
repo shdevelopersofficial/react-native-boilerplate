@@ -13,6 +13,7 @@ const sidebars = {
       collapsed: false,
       items: ["get-started/installation", "get-started/configuration"],
     },
+    "troubleshooting",
   ],
 };
 

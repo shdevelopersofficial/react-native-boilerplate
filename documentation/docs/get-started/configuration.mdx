@@ -2,14 +2,11 @@
 
 import Android from "./android.mdx";
 import IOS from "./ios.mdx";
+import Animation from "@site/src/components/Animation";
 
 Actually our system have implement multiple app models. So we can implement
 more apps in a single code base. Easy to maintain codebase and well
 structured.
-
-- After completed project configuration. you can just remove doc file
-  [Android](android.md), [iOS](ios.md), [Code configuration](codeConfig.md) and
-  [Features](features.md).
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -22,9 +19,35 @@ import TabItem from "@theme/TabItem";
     <IOS />
   </TabItem>
   <TabItem value="web" label="Web">
-    - Coming soon
+    <Animation animation={"coming-soon"} />
   </TabItem>
-  <TabItem value="windows" label="Windows">
-    - Coming soon
+  <TabItem value="desktop" label="Desktop">
+    <Animation animation={"coming-soon"} />
   </TabItem>
 </Tabs>
+
+<br></br>
+<br></br>
+
+# Configuration Environment Files
+
+The `env` directory contains configuration files for running the app in
+different environments.
+
+Each file within represents the environment:
+
+```bash
+env
+├── brand1
+│   ├── dev
+│   ├── live
+│   └── prod
+└── brand2
+    ├── dev
+    ├── live
+    └── prod
+```
+
+The mocked values for use in jest tests are in
+`__mocks__/react-native-config.js`. If the config structure is changed, remember
+to update this file.
