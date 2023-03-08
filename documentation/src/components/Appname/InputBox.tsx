@@ -8,19 +8,17 @@ function AppNameInputBox() {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (event) => {
-    setInputValue(event.target.value);
+    setInputValue(event.target.value.trim());
   };
 
   const handleSubmit = () => {
     // Do something with the input value, such as save it to localStorage
     console.log("inputValue", inputValue);
-    localStorage.setItem("inputValue", inputValue);
+    localStorage.setItem("appName", inputValue);
   };
 
   return (
     <form>
-      <label>Enter your app name</label>
-      <br />
       <input type="text" value={inputValue || ""} onChange={handleChange} />
       <br />
 
