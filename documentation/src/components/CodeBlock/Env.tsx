@@ -16,18 +16,13 @@ export default function NpmInstall(): JSX.Element {
 
   return (
     <CodeBlock>
-      $
       {getLocalStorage().map((item) => (
-        <div
-          style={{
-            marginTop: "-40px",
-          }}
-        >{`
+        <>{`
 └── brand2
 ├── dev
 ├── live
 └── prod
-        `}</div>
+        `}</>
       ))}
     </CodeBlock>
   );
