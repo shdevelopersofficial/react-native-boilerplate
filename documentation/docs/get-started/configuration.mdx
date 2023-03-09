@@ -4,6 +4,7 @@ import Android from "./android.mdx";
 import IOS from "./ios.mdx";
 import Animation from "@site/src/components/Animation";
 import AppBrandInputBrand from "@site/src/components/AppBrand/InputBrand";
+import Env from "@site/src/components/CodeBlock/Env";
 
 Our system is providing to implement multiple apps in a single codebase. So we can implement multiple apps in a different package and other model. Easy to maintain codebase and well structured.
 
@@ -18,9 +19,7 @@ So you can add the brand name , enter the brand name in the input field below.
 
 <AppBrandInputBrand />
 
-{/_ Actually our system have implement multiple app models. So we can implement
-more apps in a different package and other model. Easy to maintain codebase and well
-structured. _/}
+Actually our system have implement multiple app models. So we can implement more apps in a different package and other model. Easy to maintain codebase and well structured.
 
 # Configuration Environment Files
 
@@ -40,6 +39,8 @@ env
     ├── live
     └── prod
 ```
+
+<Env />
 
 :::note
 The env configuration is already added in this project. You can check the env folder.

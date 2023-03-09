@@ -1,13 +1,12 @@
 import React, { useState, useContext } from "react";
-// import { useSelector, useDispatch } from "react-redux";
-// import store from "../../store/store";
-// import { Provider } from "react-redux";
-import AppName from "../AppName/AppName";
 import Link from "@docusaurus/Link";
 
 function InputBrand() {
   const getLocalStorage = () => {
-    var myValue = JSON.parse(localStorage.getItem("appBrand"));
+    var myValue =
+      JSON.parse(localStorage.getItem("appBrand")) != null
+        ? JSON.parse(localStorage.getItem("appBrand"))
+        : [];
     return myValue ? myValue : "";
   };
 
@@ -20,8 +19,13 @@ function InputBrand() {
   };
 
   const handleSubmit = () => {
-    var array = brands ? brands : ["brand1", "brand2"];
-    array.push(inputValue);
+    if (inputValue == "") {
+      alert("Please enter your app brand name");
+      return;
+    }
+    var appName = inputValue.toLowerCase();
+    var array = brands ? brands : [];
+    array.push(appName);
     localStorage.setItem("appBrand", JSON.stringify(array));
     window.location.reload();
   };
@@ -43,10 +47,9 @@ function InputBrand() {
         onChange={handleChange}
         placeholder={"Enter your app brand"}
       />
-      <br />
-      <br />
 
       <Link
+        style={{ marginLeft: "10px" }}
         className="button button--secondary button--md"
         onClick={() => {
           handleSubmit();
@@ -54,6 +57,60 @@ function InputBrand() {
       >
         Save App Brand Name
       </Link>
+
+      <br />
+      <br />
+
+      {brands &&
+        brands.map(
+          (
+            brand: {
+              brand: string;
+            },
+            index: {
+              index: number;
+            }
+          ) => {
+            return (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  width: "250px",
+                  margin: "10px 0",
+                  borderRadius: "10px",
+                  border: "2px solid #ccc",
+                }}
+              >
+                <span
+                  style={{
+                    color: "#fff",
+                  }}
+                >
+                  {brand}
+                </span>
+                <button
+                  style={{
+                    borderRadius: "10px",
+                    padding: "10px",
+                    border: "2px solid #ccc",
+                    fontSize: "16px",
+                  }}
+                  onClick={() => {
+                    var array = brands;
+                    array.splice(index, 1);
+                    localStorage.setItem("appBrand", JSON.stringify(array));
+                    window.location.reload();
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+            );
+          }
+        )}
+
       <br />
       <br />
     </div>

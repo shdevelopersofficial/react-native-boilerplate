@@ -18,6 +18,10 @@ function AppNameInputBox() {
   };
 
   const handleSubmit = () => {
+    if (inputValue == "") {
+      alert("Please enter your app name");
+      return;
+    }
     // Do something with the input value, such as save it to localStorage
     localStorage.setItem("appName", inputValue);
     window.location.reload();
@@ -40,10 +44,9 @@ function AppNameInputBox() {
         onChange={handleChange}
         placeholder={"Enter your app name"}
       />
-      <br />
-      <br />
 
       <Link
+        style={{ marginLeft: "10px" }}
         className="button button--secondary button--md"
         onClick={() => {
           handleSubmit();
