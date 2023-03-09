@@ -5,14 +5,10 @@ import {
 } from "@docusaurus/plugin-content-docs/client";
 import CodeBlock from "@theme/CodeBlock";
 
-export default function NpmInstall({ NameType }): JSX.Element {
+export default function NpmInstall(): JSX.Element {
   const getLocalStorage = () => {
     const myValue = localStorage.getItem("appName");
-    if (NameType === "uppercase") {
-      return myValue ? myValue : "MyApp";
-    } else {
-      return myValue ? myValue.toLowerCase() : "myapp";
-    }
+    return myValue ? myValue : "MyApp";
   };
 
   return (

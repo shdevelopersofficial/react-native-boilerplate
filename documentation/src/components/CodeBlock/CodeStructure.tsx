@@ -5,6 +5,8 @@ import {
 } from "@docusaurus/plugin-content-docs/client";
 import CodeBlock from "@theme/CodeBlock";
 
+import AppName from "../Appname/AppName";
+
 export default function CodeStructure(): JSX.Element {
   const getLocalStorage = () => {
     const myValue = localStorage.getItem("appName");
@@ -13,7 +15,9 @@ export default function CodeStructure(): JSX.Element {
 
   return (
     <>
-      <CodeBlock language="command">{`${getLocalStorage()}
+      <CodeBlock language="command">
+        <AppName />
+        {`
 ├── blog
 │   ├── 2019-05-28-hola.md. // Blog posts
 │   ├── 2019-05-29-hello-world.md
@@ -35,7 +39,8 @@ export default function CodeStructure(): JSX.Element {
 ├── package.json
 ├── README.md
 ├── sidebars.js
-└── yarn.lock`}</CodeBlock>
+└── yarn.lock`}
+      </CodeBlock>
     </>
   );
 }
