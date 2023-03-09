@@ -17,6 +17,7 @@ const sidebars = {
         "get-started/configuration",
         "get-started/scripts/scripts",
         "get-started/codeSigning/codeSigning",
+        "get-started/typescript",
       ],
     },
     {
