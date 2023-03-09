@@ -1,33 +1,75 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #000000;
-  --ifm-color-primary-dark: #000000;
-  --ifm-color-primary-darker: #000000;
-  --ifm-color-primary-darkest: #000000;
-  --ifm-color-primary-light: #000000;
-  --ifm-color-primary-lighter: #000000;
-  --ifm-color-primary-lightest: #000000;
+  --react-native-color-rgb: 97, 218, 251;
+  --background-surface-color-rgb: 255, 255, 255;
+  --color-primary-rgb: 14, 83, 189;
+  --font-color-base-rgb: 28, 30, 33;
+  --footer-background-color-rgb: 235, 235, 235;
+  --hover-overlay-rgb: 0, 0, 0;
+  --hover-overlay-alpha: 0.15;
+
+  --ifm-background-surface-color: rgb(var(--background-surface-color-rgb));
+
+  --ifm-color-primary: rgb(var(--color-primary-rgb));
+  --ifm-color-primary-dark: #0d4baa;
+  --ifm-color-primary-darker: #0c47a1;
+  --ifm-color-primary-darkest: #0a3a84;
+  --ifm-color-primary-light: #0f5bd0;
+  --ifm-color-primary-lighter: #105fd9;
+  --ifm-color-primary-lightest: #1a6eee;
+
+  --ifm-code-background: rgb(226, 227, 228);
+  --ifm-code-padding-horizontal: 0.25rem;
+  --ifm-code-padding-vertical: 0.25rem;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-font-color-base: rgb(var(--font-color-base-rgb));
+
+  --ifm-hover-overlay: rgba(
+    var(--hover-overlay-rgb),
+    var(--hover-overlay-alpha)
+  );
+
+  --ifm-link-decoration: none;
+  --ifm-link-hover-color: var(--ifm-link-color);
+  --ifm-link-hover-decoration: none;
+
+  --ifm-navbar-item-padding-vertical: 4px;
+  --ifm-navbar-item-padding-horizontal: 18px;
+
+  --ifm-footer-background-color: rgb(var(--footer-background-color-rgb));
+
+  --ifm-tabs-padding-horizontal: 1rem;
+  --ifm-tabs-padding-vertical: 0.2rem;
+
+  --ifm-transition-fast: 100ms;
+  --ifm-transition-slow: 300ms;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #85ffe4;
-  --ifm-color-primary-dark: #5effdb;
-  --ifm-color-primary-darker: #4bffd7;
-  --ifm-color-primary-darkest: #11ffca;
-  --ifm-color-primary-light: #acffed;
-  --ifm-color-primary-lighter: #bffff1;
-  --ifm-color-primary-lightest: #f9fffe;
-  --ifm-background-color: #000000;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --background-color-rgb: 10, 11, 12;
+  --background-surface-color-rgb: 36, 37, 38;
+  --color-primary-rgb: 14, 147, 253;
+  --font-color-base-rgb: 245, 246, 247;
+  --footer-background-color-rgb: 20, 21, 22;
+  --hover-overlay-rgb: 255, 255, 255;
+
+  --ifm-background-color: rgb(var(--background-color-rgb));
+  --ifm-background-surface-color: rgb(var(--background-surface-color-rgb));
+
+  --ifm-color-primary: rgb(var(--color-primary-rgb));
+  --ifm-color-primary-dark: #0285ee;
+  --ifm-color-primary-darker: #027ee1;
+  --ifm-color-primary-darkest: #0268b9;
+  --ifm-color-primary-light: #289ffd;
+  --ifm-color-primary-lighter: #36a5fd;
+  --ifm-color-primary-lightest: #5db7fe;
+
+  --ifm-hover-overlay: rgba(
+    var(--hover-overlay-rgb),
+    var(--hover-overlay-alpha)
+  );
+
+  --ifm-footer-background-color: rgb(var(--footer-background-color-rgb));
 }
 
 .header-github-link:hover {
