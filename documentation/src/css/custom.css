@@ -206,3 +206,12 @@ div[class^="announcementBar_"] {
 [data-theme="dark"] [data-rmiz-modal-overlay="visible"] {
   background-color: rgba(0 0 0 / 95%);
 }
+.code-span {
+  background-color: var(--ifm-code-background);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--ifm-code-border-radius);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--ifm-code-font-size);
+  padding: var(--ifm-code-padding-vertical) var(--ifm-code-padding-horizontal);
+  vertical-align: middle;
+}

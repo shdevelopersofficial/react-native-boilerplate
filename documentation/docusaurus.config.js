@@ -46,6 +46,8 @@ const config = {
     users,
   },
 
+  clientModules: [require.resolve("./src/functions/index.ts")],
+
   // Set the production url of your site here
   url: "https://shdevelopersofficial.github.io",
   trailingSlash: isDeployPreview,

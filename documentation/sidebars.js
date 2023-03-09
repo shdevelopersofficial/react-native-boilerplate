@@ -12,6 +12,7 @@ const sidebars = {
       },
       collapsed: false,
       items: [
+        "get-started/requirements",
         "get-started/installation",
         "get-started/configuration",
         "get-started/scripts/scripts",
