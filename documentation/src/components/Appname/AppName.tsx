@@ -13,18 +13,19 @@ function AppName({
   right?: string;
   background?: boolean;
 }) {
-  const isUpperCase = (str: { str: string }) => /^[A-Z]*$/.test(str);
-
   const getLocalStorage = () => {
-    const myValue = localStorage.getItem("appName");
+    const myValue =
+      localStorage.getItem("appName") !== null
+        ? localStorage.getItem("appName")
+        : "MyApp";
 
     if (packageName) {
-      const name = myValue ? myValue.toLowerCase() : "myapp";
+      const name = myValue ? myValue?.toLowerCase() : "myapp";
       return right ? "com." + name + "." + right : "com." + name;
     }
 
-    if (myValue == myValue.toLowerCase() || type === "lowercase") {
-      return myValue ? myValue.toLowerCase() : "myapp";
+    if (myValue === myValue?.toLowerCase() || type === "lowercase") {
+      return myValue ? myValue?.toLowerCase() : "myapp";
     }
 
     return myValue ? myValue : "MyApp";

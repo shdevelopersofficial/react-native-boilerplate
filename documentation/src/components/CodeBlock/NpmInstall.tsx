@@ -7,7 +7,7 @@ import CodeBlock from "@theme/CodeBlock";
 
 export default function NpmInstall(): JSX.Element {
   const getLocalStorage = () => {
-    const myValue = localStorage.getItem("appName");
+    const myValue = localStorage.getItem("appName") || "MyApp";
     return myValue ? myValue : "MyApp";
   };
 

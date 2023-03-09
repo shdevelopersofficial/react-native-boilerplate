@@ -3,13 +3,47 @@
 import Android from "./android.mdx";
 import IOS from "./ios.mdx";
 import Animation from "@site/src/components/Animation";
-import Appname from "@site/src/components/Appname/Appname";
+import AppBrandInputBrand from "@site/src/components/AppBrand/InputBrand";
 
-Actually our system have implement multiple app models. So we can implement
-more apps in a single code base. Easy to maintain codebase and well
-structured.
+Our system is providing to implement multiple apps in a single codebase. So we can implement multiple apps in a different package and other model. Easy to maintain codebase and well structured.
 
-<Appname packageName={true} background={true} />
+- Example
+
+  - Food Delivery App
+  - FoodApp need delivery app , Shop app , Customer app , Driver app , Admin app. So here we can implement all apps in a single codebase.
+  - Actually our project is configured with 2 brands. that is 'brand1' and 'brand2'.
+  - If you want to implement more brands, you can add more brands , otherwise only 1 brand is enough.
+
+So you can add the brand name , enter the brand name in the input field below.
+
+<AppBrandInputBrand />
+
+{/_ Actually our system have implement multiple app models. So we can implement
+more apps in a different package and other model. Easy to maintain codebase and well
+structured. _/}
+
+# Configuration Environment Files
+
+The `env` directory contains configuration files for running the app in
+different environments.
+
+Each file within represents the environment:
+
+```bash
+env
+├── brand1
+│   ├── dev
+│   ├── live
+│   └── prod
+└── brand2
+    ├── dev
+    ├── live
+    └── prod
+```
+
+:::note
+The env configuration is already added in this project. You can check the env folder.
+:::
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
@@ -31,26 +65,3 @@ import TabItem from "@theme/TabItem";
 
 <br></br>
 <br></br>
-
-# Configuration Environment Files
-
-The `env` directory contains configuration files for running the app in
-different environments.
-
-Each file within represents the environment:
-
-```bash
-env
-├── brand1
-│   ├── dev
-│   ├── live
-│   └── prod
-└── brand2
-    ├── dev
-    ├── live
-    └── prod
-```
-
-The mocked values for use in jest tests are in
-`__mocks__/react-native-config.js`. If the config structure is changed, remember
-to update this file.

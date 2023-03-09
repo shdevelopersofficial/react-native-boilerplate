@@ -9,7 +9,7 @@ import AppName from "../Appname/AppName";
 
 export default function CodeStructure(): JSX.Element {
   const getLocalStorage = () => {
-    const myValue = localStorage.getItem("appName");
+    const myValue = localStorage.getItem("appName") || "MyApp";
     return myValue ? myValue : "myapp";
   };
 
