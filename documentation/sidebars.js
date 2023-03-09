@@ -24,7 +24,7 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         "guides/assets",
         "guides/constants",
@@ -43,7 +43,7 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         "developerTools/introduction",
         "developerTools/flipper",
