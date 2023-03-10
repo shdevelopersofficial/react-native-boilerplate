@@ -1,3 +1,37 @@
 {
-  "flipperVersion": "0.164.0"
+  "flipperVersion": "0.164.0",
+  "reactNativeVersion": "0.71.4",
+  "npmVersion": "1.0.0",
+  "environment": [
+    {
+      "RN_APP_ID": "com.xcule",
+      "RN_APP_NAME": "Test App (Dev)",
+      "RN_APP_NAME_SHORT": "testApp-dev",
+      "RN_VERSION_SUFFIX": "-dev",
+      "RN_DISABLE_SECURITY": "true",
+      "RN_APP_BRAND": "brand1",
+      "RN_SERVER_URI": "https://localhost.com",
+      "RN_APP_ENV": "dev"
+    },
+    {
+      "RN_APP_ID": "com.brand1.xcule",
+      "RN_APP_NAME": "Test App",
+      "RN_APP_NAME_SHORT": "testApp",
+      "RN_VERSION_SUFFIX": "",
+      "RN_DISABLE_SECURITY": "false",
+      "RN_APP_BRAND": "brand1",
+      "RN_APP_ENV": "live",
+      "RN_SERVER_URI": "https://examplelive.com"
+    },
+    {
+      "RN_APP_ID": "com.xcule",
+      "RN_APP_NAME": "Test App (Prod)",
+      "RN_APP_NAME_SHORT": "testApp-prod",
+      "RN_VERSION_SUFFIX": "-dev",
+      "RN_DISABLE_SECURITY": "false",
+      "RN_APP_BRAND": "brand1",
+      "RN_SERVER_URI": "https://exampleproduction.com",
+      "RN_APP_ENV": "prod"
+    }
+  ]
 }

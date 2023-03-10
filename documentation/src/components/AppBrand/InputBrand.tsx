@@ -1,8 +1,4 @@
 import React, { useState, useContext } from "react";
-// import { useSelector, useDispatch } from "react-redux";
-// import store from "../../store/store";
-// import { Provider } from "react-redux";
-import AppName from "./AppName";
 import Link from "@docusaurus/Link";
 
 function InputAppName() {
