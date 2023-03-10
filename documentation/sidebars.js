@@ -55,6 +55,7 @@ const sidebars = {
       ],
     },
     "security/security",
+    "tips",
     "troubleshooting",
   ],
 };
