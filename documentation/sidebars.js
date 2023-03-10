@@ -14,7 +14,7 @@ const sidebars = {
       items: [
         "get-started/requirements",
         "get-started/installation",
-        "get-started/configuration",
+        "get-started/configuration/configuration",
         "get-started/scripts/scripts",
         "get-started/codeSigning/codeSigning",
         "get-started/typescript",
