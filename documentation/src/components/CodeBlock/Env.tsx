@@ -11,18 +11,17 @@ export default function NpmInstall(): JSX.Element {
       "brand1",
       "brand2",
     ];
-    return myValue ? myValue : "MyApp";
+    return myValue ? myValue : ["brand1", "brand2"];
   };
 
   return (
     <CodeBlock>
       {getLocalStorage().map((item) => (
-        <>{`
-└── brand2
-├── dev
-├── live
-└── prod
-        `}</>
+        <>
+          <>ddd</>
+          <br />
+          <>ddd</>
+        </>
       ))}
     </CodeBlock>
   );

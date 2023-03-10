@@ -10,12 +10,23 @@ import styles from "./index.module.css";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary-dark", styles.heroBanner)}>
+    <header className={styles.heroBanner}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1 className={clsx("hero__title", styles.headerTitle)}>
+          <div className={clsx(styles.headerTitleText)}>React Native</div>
+          <div className={clsx(styles.headerTitleText)}>Boilerplate</div>
+        </h1>
+        <p className={clsx("hero__subtitle", styles.headerTagline)}>
+          {siteConfig.tagline}
+        </p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs">
+          <Link
+            className={clsx(
+              "button button--primary button--lg",
+              styles.headerButton
+            )}
+            to="/docs"
+          >
             Get Started
           </Link>
         </div>

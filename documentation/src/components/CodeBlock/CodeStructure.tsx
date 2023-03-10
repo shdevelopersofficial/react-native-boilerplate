@@ -18,28 +18,54 @@ export default function CodeStructure(): JSX.Element {
       <CodeBlock language="command">
         <AppName />
         {`
-├── blog
-│   ├── 2019-05-28-hola.md. // Blog posts
-│   ├── 2019-05-29-hello-world.md
-│   └── 2020-05-30-welcome.md
-├── docs
-│   ├── doc1.md
-│   ├── doc2.md
-│   ├── doc3.md
-│   └── mdx.md
-├── src
-│   ├── css
-│   │   └── custom.css
-│   └── pages
-│       ├── styles.module.css
-│       └── index.js
-├── static
-│   └── img
-├── docusaurus.config.js
+├── mocks
+├── .husky
+├── .vscode
+├── android
+├── app
+│   ├── api
+│   ├── assets
+│   ├── constants
+│   └── containers
+│   └── context
+│   └── modules
+│   └── navigators
+│   └── screens
+│   └── stores
+│   └── store
+│   └── styles
+│   └── translations
+│   └── types
+│   └── utils
+│   └── app.tsx
+├── coverage
+├── .env
+├── .eslintignore
+├── .eslintrc
+├── .gitignore
+├── .node-version
+├── .prettierignore
+├── .prettierrc
+├── .ruby-version
+├── .unimportedrc.json
+├── .watchmanconfig
+├── app.json
+├── babel.config.js
+├── Gemfile
+├── index.android.ts
+├── index.common.js
+├── index.ios.js
+├── index.web.js
+├── Jenkinsfile
+├── metro.config.js
+├── package-lock.json
 ├── package.json
+├── react-native.config.js
 ├── README.md
-├── sidebars.js
-└── yarn.lock`}
+├── renovate.json
+├── tsconfig.json
+├── tsconfig.spec.json
+`}
       </CodeBlock>
     </>
   );

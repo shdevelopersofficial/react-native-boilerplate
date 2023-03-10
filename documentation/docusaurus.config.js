@@ -6,6 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const npm2yarn = require("@docusaurus/remark-plugin-npm2yarn");
 
 const users = require("./showcase.json");
+const constants = require("./constants.json");
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -44,6 +45,7 @@ const config = {
   favicon: "img/favicon.ico",
   customFields: {
     users,
+    constants,
   },
 
   clientModules: [require.resolve("./src/functions/index.ts")],
@@ -211,14 +213,14 @@ const config = {
           content: "react-native boilerplate , react-native",
         },
       ],
-      announcementBar: {
-        id: "support_us",
-        content:
-          '⭐️ If you like our react native boilerplate, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/shdevelopersofficial/react-native-boilerplate">GitHub</a>',
-        backgroundColor: "#fafbfc",
-        textColor: "#091E42",
-        isCloseable: false,
-      },
+      // announcementBar: {
+      //   id: "support_us",
+      //   content:
+      //     '⭐️ If you like our react native boilerplate, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/shdevelopersofficial/react-native-boilerplate">GitHub</a>',
+      //   backgroundColor: "#fafbfc",
+      //   textColor: "#091E42",
+      //   isCloseable: true,
+      // },
 
       algolia: {
         // The application ID provided by Algolia
@@ -245,11 +247,11 @@ const config = {
           {
             type: "doc",
             docId: "introduction",
-            position: "left",
+            position: "right",
             label: "Docs",
           },
-          { to: "showcase", label: "Showcase", position: "left" },
-          // { to: "/blog", label: "Blog", position: "left" },
+          { to: "showcase", label: "Showcase", position: "right" },
+          // { to: "/blog", label: "Blog", position: "right" },
           {
             href: "https://www.npmjs.com/package/@shdevelopers/react-native-boilerplate",
             position: "right",
@@ -265,7 +267,6 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
         // links: [
         //   {
         //     title: "Docs",
@@ -307,7 +308,7 @@ const config = {
         //     ],
         //   },
         // ],
-        // copyright: `Copyright © ${new Date().getFullYear()} SH Developers, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} `,
       },
       prism: {
         theme: lightCodeTheme,
