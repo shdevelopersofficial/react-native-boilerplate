@@ -5,7 +5,7 @@ import React, { useState, useContext } from "react";
 import AppName from "./AppName";
 import Link from "@docusaurus/Link";
 
-function AppNameInputBox() {
+function InputAppName() {
   const getLocalStorage = () => {
     const myValue = localStorage.getItem("appName");
     return myValue ? myValue : "";
@@ -60,4 +60,4 @@ function AppNameInputBox() {
   );
 }
 
-export default AppNameInputBox;
+export default InputAppName;

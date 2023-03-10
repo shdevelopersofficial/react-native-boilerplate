@@ -6,20 +6,18 @@ import Animation from "@site/src/components/Animation";
 import AppBrandInputBrand from "@site/src/components/AppBrand/InputBrand";
 import Env from "@site/src/components/CodeBlock/Env";
 
-Our system is providing to implement multiple apps in a single codebase. So we can implement multiple apps in a different package and other model. Easy to maintain codebase and well structured.
+Actually our system have implement multiple app models. So we can implement more apps in a different package and other model.
+in this project we have 3 different apps. So we have 3 different env files. You can check the `env folder` in the `root directory`.
 
-- Example
+Actually we call the app as `brand1`. `brand1` is a product type of our system. currently we only implement single app in this project.
 
-  - Food Delivery App
-  - FoodApp need delivery app , Shop app , Customer app , Driver app , Admin app. So here we can implement all apps in a single codebase.
-  - Actually our project is configured with 2 brands. that is 'brand1' and 'brand2'.
-  - If you want to implement more brands, you can add more brands , otherwise only 1 brand is enough.
+But you can implement different type of apps in this project. [Reference](/docs/multiple-apps).
 
-So you can add the brand name , enter the brand name in the input field below.
+# Configuration Brand Name
+
+So you can change the brand name , enter the brand name in the input field below.
 
 <AppBrandInputBrand />
-
-Actually our system have implement multiple app models. So we can implement more apps in a different package and other model. Easy to maintain codebase and well structured.
 
 # Configuration Environment Files
 
@@ -27,20 +25,6 @@ The `env` directory contains configuration files for running the app in
 different environments.
 
 Each file within represents the environment:
-
-```bash
-root
-  env
-    ├── brand1
-    │   ├── dev
-    │   ├── live
-    │   └── prod
-    └── brand2
-        ├── dev
-        ├── live
-        └── prod
-.env
-```
 
 <Env />
 

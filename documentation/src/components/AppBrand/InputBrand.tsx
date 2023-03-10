@@ -1,18 +1,17 @@
 import React, { useState, useContext } from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// import store from "../../store/store";
+// import { Provider } from "react-redux";
+import AppName from "./AppName";
 import Link from "@docusaurus/Link";
 
-function InputBrand() {
+function InputAppName() {
   const getLocalStorage = () => {
-    var myValue =
-      JSON.parse(localStorage.getItem("appBrand")) != null
-        ? JSON.parse(localStorage.getItem("appBrand"))
-        : [];
+    const myValue = localStorage.getItem("appBrand");
     return myValue ? myValue : "";
   };
 
-  const [inputValue, setInputValue] = useState("");
-
-  const brands = getLocalStorage();
+  const [inputValue, setInputValue] = useState(getLocalStorage());
 
   const handleChange = (event) => {
     setInputValue(event.target.value.trim());
@@ -20,13 +19,11 @@ function InputBrand() {
 
   const handleSubmit = () => {
     if (inputValue == "") {
-      alert("Please enter your app brand name");
+      alert("Please enter your brand name");
       return;
     }
-    var appName = inputValue.toLowerCase();
-    var array = brands ? brands : [];
-    array.push(appName);
-    localStorage.setItem("appBrand", JSON.stringify(array));
+    // Do something with the input value, such as save it to localStorage
+    localStorage.setItem("appBrand", inputValue);
     window.location.reload();
   };
 
@@ -45,7 +42,7 @@ function InputBrand() {
         }}
         value={inputValue || ""}
         onChange={handleChange}
-        placeholder={"Enter your app brand"}
+        placeholder={"Enter your brand name"}
       />
 
       <Link
@@ -55,66 +52,12 @@ function InputBrand() {
           handleSubmit();
         }}
       >
-        Save App Brand Name
+        Save Brand Name
       </Link>
-
-      <br />
-      <br />
-
-      {brands &&
-        brands.map(
-          (
-            brand: {
-              brand: string;
-            },
-            index: {
-              index: number;
-            }
-          ) => {
-            return (
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: "250px",
-                  margin: "10px 0",
-                  borderRadius: "10px",
-                  border: "2px solid #ccc",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#fff",
-                  }}
-                >
-                  {brand}
-                </span>
-                <button
-                  style={{
-                    borderRadius: "10px",
-                    padding: "10px",
-                    border: "2px solid #ccc",
-                    fontSize: "16px",
-                  }}
-                  onClick={() => {
-                    var array = brands;
-                    array.splice(index, 1);
-                    localStorage.setItem("appBrand", JSON.stringify(array));
-                    window.location.reload();
-                  }}
-                >
-                  Delete
-                </button>
-              </div>
-            );
-          }
-        )}
-
       <br />
       <br />
     </div>
   );
 }
 
-export default InputBrand;
+export default InputAppName;
